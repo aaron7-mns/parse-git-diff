@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unchanged blank line parse \`unchanged-blank-line\` 1`] = `
+{
+  "files": [
+    {
+      "chunks": [
+        {
+          "changes": [
+            {
+              "content": "",
+              "lineAfter": 4,
+              "lineBefore": 4,
+              "type": "UnchangedLine",
+            },
+            {
+              "content": "  // unchanged blank line above",
+              "lineAfter": 5,
+              "lineBefore": 5,
+              "type": "UnchangedLine",
+            },
+            {
+              "content": "  console.log("hello world");",
+              "lineAfter": 6,
+              "type": "AddedLine",
+            },
+            {
+              "content": "",
+              "lineAfter": 7,
+              "lineBefore": 6,
+              "type": "UnchangedLine",
+            },
+          ],
+          "context": "function hello() {",
+          "fromFileRange": {
+            "lines": 4,
+            "start": 4,
+          },
+          "toFileRange": {
+            "lines": 5,
+            "start": 4,
+          },
+          "type": "Chunk",
+        },
+      ],
+      "path": "rename.js",
+      "type": "ChangedFile",
+    },
+  ],
+  "type": "GitDiff",
+}
+`;

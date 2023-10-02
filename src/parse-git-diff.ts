@@ -369,11 +369,16 @@ function parseChanges(
       }
     }
     changes.push(change);
+
+    if (line === '\\ No newline at end of file') {
+      break;
+    }
   }
   return changes;
 }
 
 function getLineType(line: string): LineType | null {
+  if (!line) return LineType.Unchanged;
   return CHAR_TYPE_MAP[line[0]] || null;
 }
 
